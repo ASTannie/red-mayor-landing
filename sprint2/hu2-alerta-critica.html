@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>HU2 - Alertas Críticas</title>
+    <style>
+        body { font-family: Arial; background: #f9f9f9; padding: 20px; }
+        .alerta {
+            background: #ff4d4d;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            width: fit-content;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HU2 - Compartir alertas críticas</h1>
+    <p>Alerta visual crítica para interfaz de profesional.</p>
+
+    <div class="alerta" id="alerta" style="display:none;">
+        ⚠ ALERTA CRÍTICA: Ritmo cardiaco inestable
+    </div>
+
+    <button onclick="activar()">Enviar alerta</button>
+
+    <script>
+        function activar() {
+            document.getElementById("alerta").style.display = "block";
+        }
+    </script>
+</body>
+</html>
