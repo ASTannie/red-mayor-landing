@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>HU7 - Calificar atención</title>
+    <style>
+        .stars span {
+            font-size: 35px;
+            cursor: pointer;
+            color: #ccc;
+        }
+        .selected {
+            color: gold !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>HU7 - Calificar atención</h1>
+    <p>Califica la atención recibida:</p>
+
+    <div class="stars">
+        <span onclick="rate(1)">★</span>
+        <span onclick="rate(2)">★</span>
+        <span onclick="rate(3)">★</span>
+        <span onclick="rate(4)">★</span>
+        <span onclick="rate(5)">★</span>
+    </div>
+
+    <script>
+        function rate(n) {
+            let stars = document.querySelectorAll(".stars span");
+            stars.forEach((s,i) => {
+                s.classList.toggle("selected", i < n);
+            });
+            alert("Gracias por tu calificación: " + n + " estrellas");
+        }
+    </script>
+</body>
+</html>
