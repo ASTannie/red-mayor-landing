@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>HU1 - Chat con Profesional</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f5f5f5;}
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .chat-box {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 280px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>HU1 - Chat con profesional</h1>
+    <p>Chat flotante simulado para comunicación con médicos.</p>
+
+    <div class="chat-button" onclick="toggleChat()">💬</div>
+
+    <div class="chat-box" id="chatBox">
+        <p><strong>Profesional de Salud:</strong> Hola, ¿cómo puedo ayudarte?</p>
+        <input type="text" placeholder="Escribe un mensaje..." style="width:100%; padding:5px;">
+    </div>
+
+    <script>
+        function toggleChat() {
+            let chat = document.getElementById("chatBox");
+            chat.style.display = chat.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
